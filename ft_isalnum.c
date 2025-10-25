@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 08:54:30 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/24 12:00:28 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/25 17:37:45 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 
 int	ft_isalnum(int x)
 {
-	if (ft_isalpha(x) && ft_isdigit(x))
+	if (ft_isalpha(x) || ft_isdigit(x))
 		return (1);
 	return (0);
 }

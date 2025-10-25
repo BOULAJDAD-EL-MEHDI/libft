@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 07:31:31 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/24 11:54:52 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/25 17:34:53 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,16 +18,3 @@ int	ft_isalpha(int c)
 		return (1);
 	return (0);
 }
-
-/*int	main(void)
-{
-	int i;
-	i = ft_isalpha('K');
-	if (i)
-	{
-		printf("is alpha\n");
-	}
-	else 
-		printf("is not alpha");
-	return 0;
-}*/
