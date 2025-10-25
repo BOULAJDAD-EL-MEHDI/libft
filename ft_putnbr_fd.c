@@ -6,11 +6,9 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:22:30 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/22 15:33:15 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/25 11:43:19 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
 
 void	ft_putchar(char c, int fd)
 {
@@ -32,10 +30,4 @@ void	ft_putnbr_fd(int n, int fd)
 	if (n >= 10)
 		ft_putnbr_fd(n / 10, fd);
 	ft_putchar((n % 10) + '0', fd);
-}
-
-int	main()
-{
-	ft_putnbr_fd(2545585, 1);
-	return 0;
 }

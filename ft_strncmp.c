@@ -1,39 +1,25 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_strncmp.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:12:29 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 10:02:36 by eboulajd         ###   ########.fr       */
+/*   Created: 2025/10/17 08:26:35 by eboulajd          #+#    #+#             */
+/*   Updated: 2025/10/25 10:18:58 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+int	ft_strncmp(const char *s1, const char *s2, size_t n)
 {
-	unsigned char	*ret;
-	unsigned char	*sr;
-	size_t			i;
+	size_t	i;
 
-	ret = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (sr > ret)
+	i = 0;
+	while (i < n && ((unsigned char)s1[i] || (unsigned char)s2[i]))
 	{
-		i = 0;
-		while (i < n)
-		{
-			ret[i] = sr[i];
-			i++;
-		}
+		if ((unsigned char)s1[i] != (unsigned char)s2[i])
+			return ((unsigned char)s1[i] - (unsigned char)s2[i]);
+		i++;
 	}
-	else
-	{
-		while (n > 0)
-		{
-			ret[n - 1] = sr[n - 1];
-			n--;
-		}
-	}
-	return (ret);
+	return ((unsigned char)s1[i - 1] - (unsigned char)s2[i - 1]);
 }

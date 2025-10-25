@@ -1,39 +1,23 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_memmove.c                                       :+:      :+:    :+:   */
+/*   ft_putstr_fd.c                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/15 10:12:29 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 10:02:36 by eboulajd         ###   ########.fr       */
+/*   Created: 2025/10/22 15:05:03 by eboulajd          #+#    #+#             */
+/*   Updated: 2025/10/25 11:40:50 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	*ft_memmove(void *dest, const void *src, size_t n)
+void	ft_putstr_fd(char *s, int fd)
 {
-	unsigned char	*ret;
-	unsigned char	*sr;
-	size_t			i;
+	size_t	i;
 
-	ret = (unsigned char *)dest;
-	sr = (unsigned char *)src;
-	if (sr > ret)
+	i = 0;
+	while (s[i])
 	{
-		i = 0;
-		while (i < n)
-		{
-			ret[i] = sr[i];
-			i++;
-		}
+		write(fd, &s[i], 1);
+		i++;
 	}
-	else
-	{
-		while (n > 0)
-		{
-			ret[n - 1] = sr[n - 1];
-			n--;
-		}
-	}
-	return (ret);
 }

@@ -6,13 +6,9 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:33:34 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/21 16:14:07 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/25 11:24:48 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-#include <stdio.h>
-#include <stdlib.h>
 
 static int	function_1(const char *str, char c)
 {
@@ -34,7 +30,6 @@ static int	function_1(const char *str, char c)
 	}
 	return (counter);
 }
-/*function_1 is used as counter for word.*/
 
 static char	*function_2(const char *str, int start, int end)
 {
@@ -48,7 +43,6 @@ static char	*function_2(const char *str, int start, int end)
 	rtn[i] = 0;
 	return (rtn);
 }
-/*function_2 is used as method to copy the words*/
 
 static int	function_3(const char *str)
 {
@@ -59,7 +53,6 @@ static int	function_3(const char *str)
 		i++;
 	return (i);
 }
-/*function 3 is used as strlen, but with static_int*/
 
 char	**ft_split(char const *s, char c)
 {
@@ -89,21 +82,3 @@ char	**ft_split(char const *s, char c)
 	out[j] = 0;
 	return (out);
 }
-
-/*s is the str to be split. c is the delimiter char.
-The function return the array of new strs resulting from the split. NULL
-if the allocation fails.
-
-the code below is used to test the function
-*/
-int	main(void)
-{
-	char str[] = "dajedajedaje";
-	char **str1;
-	str1 = ft_split(str,'d');
-	while(*str1)
-	{
-		printf("%s\n",*str1++);
-	}
-}
-

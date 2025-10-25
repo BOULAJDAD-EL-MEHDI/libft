@@ -6,16 +6,13 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 09:18:08 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/14 09:52:31 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/25 09:50:06 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
-
-#include <unistd.h>
-#include <stdio.h>
 
 int	ft_isprint(int x)
 {
 	if (x >= 32 && x <= 126)
-	       return 1;
-	return 0;	
+		return (1);
+	return (0);
 }

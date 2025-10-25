@@ -6,21 +6,20 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 07:31:31 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/14 07:49:41 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/24 11:54:52 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_isalpha(int c)
 {
-	if((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
-		return 1;
-	return 0;
+	if ((c >= 'a' && c <= 'z') || (c >= 'A' && c <= 'Z'))
+		return (1);
+	return (0);
 }
 
-int	main(void)
+/*int	main(void)
 {
 	int i;
 	i = ft_isalpha('K');
@@ -31,4 +30,4 @@ int	main(void)
 	else 
 		printf("is not alpha");
 	return 0;
-}
+}*/
