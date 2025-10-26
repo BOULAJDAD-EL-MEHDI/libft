@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/16 20:29:19 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 10:16:09 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/26 09:35:36 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,11 +17,11 @@ char	*ft_strrchr(const char *s, int c)
 	ptr = (NULL);
 	while (*s)
 	{
-		if (*s == (char)c)
+		if ((unsigned char)*s == (unsigned char)c)
 			ptr = (char *)s;
 		s++;
 	}
-	if ((char)c == '\0')
+	if ((unsigned char)c == '\0')
 		return ((char *)s);
 	return (ptr);
 }

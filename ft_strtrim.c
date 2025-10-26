@@ -6,31 +6,13 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 11:07:48 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 11:23:18 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/26 13:10:56 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char	*ft_strdup(const char *s1)
-{
-	size_t	i;
-	char	*ptr;
+#include "libft.h"
 
-	i = 0;
-	while (s1[i])
-		i++;
-	ptr = malloc(i);
-	if (!ptr)
-		return (NULL);
-	i = 0;
-	while (s1[i])
-	{
-		ptr[i] = s1[i];
-		i++;
-	}
-	return (ptr);
-}
-
-char	char_in_str(const char *str, char c)
+int	char_in_str(const char *str, char c)
 {
 	size_t	i;
 
@@ -44,16 +26,6 @@ char	char_in_str(const char *str, char c)
 	return (0);
 }
 
-int	ft_strlen(char *str)
-{
-	int	i;
-
-	i = 0;
-	while (str[i])
-		i++;
-	return (i);
-}
-
 char	*ft_strtrim(char const *s1, char const *set)
 {
 	size_t	i;
@@ -61,24 +33,23 @@ char	*ft_strtrim(char const *s1, char const *set)
 	size_t	k;
 	char	*ptr;
 
+	i = 0;
+	k = 0;
+	if (!s1 || !set)
+		return (NULL);
+	j = ft_strlen(s1);
+	if (j == 0)
+		return (malloc(1));
+	j--;
 	while (char_in_str(set, s1[i]))
 		i++;
-	j = ft_strlen((char *)s1) - 1;
-	printf("the value of i is : %ld || the value of j is : %ld \n", i, j);
-	while (char_in_str(set, s1[j]))
+	while (j > i && char_in_str(set, s1[j]))
 		j--;
-	printf("the value of i is : %ld || the value of j is : %ld \n", i, j);
-	ptr = malloc((j - i + 1) * sizeof(char));
+	ptr = malloc(j - i + 2);
 	if (!ptr)
 		return (NULL);
-	k = 0;
 	while (i <= j)
-	{
-		ptr[k] = s1[i];
-		i++;
-		k++;
-	}
+		ptr[k++] = s1[i++];
 	ptr[k] = '\0';
-	printf("the value of i is : %ld || the value of j is : %ld \n", i, j);
 	return (ptr);
 }

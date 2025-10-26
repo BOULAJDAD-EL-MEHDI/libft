@@ -6,23 +6,37 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:33:09 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 11:17:55 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/26 11:58:15 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdlib.h>
 
 char	*ft_substr(char const *s, unsigned int start, size_t len)
 {
 	char	*ret;
 	size_t	i;
+	size_t	s_len;
 
-	ret = malloc(len);
+	s_len = ft_strlen(s);
+	if (start >= s_len)
+	{
+		ret = malloc(1);
+		if (ret)
+			ret[0] = '\0';
+		return (ret);
+	}
+	if (len > s_len - start)
+		len = s_len - start;
+	ret = malloc(len + 1);
 	if (!ret)
 		return (NULL);
 	i = 0;
 	while (i < len)
 	{
-		ret[i] = s[i + start];
+		ret[i] = s[start + i];
 		i++;
 	}
+	ret[i] = '\0';
 	return (ret);
 }

@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:54:07 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 11:20:48 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/26 11:59:17 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strjoin(char const *s1, char const *s2)
 
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
-	ret = malloc(i + j);
+	ret = malloc(i + j + 1);
 	if (!ret)
 		return (NULL);
 	i = 0;

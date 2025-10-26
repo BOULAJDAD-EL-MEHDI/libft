@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 08:32:22 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 11:34:09 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/26 14:25:38 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,8 +16,8 @@ int	ft_num_count(long n)
 
 	i = 0;
 	if (n <= 0)
-		n = -n;
-	while (n > 0)
+		i = 1;
+	while (n != 0)
 	{
 		n /= 10;
 		i++;
@@ -30,36 +30,26 @@ char	*ft_allocate(int n, int str_len)
 	char	*ptr;
 
 	if (n >= 0)
-		ptr = (char *)malloc(sizeof(char) * str_len);
-	else if (n < 0)
-		ptr = (char *)malloc(sizeof(char) * str_len + 1);
+		ptr = (char *)malloc(sizeof(char) * (str_len + 1));
+	else
+		ptr = (char *)malloc(sizeof(char) * (str_len + 1));
 	if (!ptr)
 		return (NULL);
+	return (ptr);
 }
 
 char	*ft_fill(long n, int str_len, char *ptr)
 {
-	if (n > 0)
+	ptr[str_len] = '\0';
+	if (n < 0)
 	{
-		ptr[str_len] = '\0';
-		while (n > 0)
-		{
-			ptr[str_len - 1] = (n % 10) + '0';
-			str_len--;
-			n /= 10;
-		}
-	}
-	else
-	{
-		n = -n;
-		ptr[str_len + 1] = '\0';
-		while (n > 0)
-		{
-			ptr[str_len] = (n % 10) + '0';
-			str_len--;
-			n /= 10;
-		}
 		ptr[0] = '-';
+		n = -n;
+	}
+	while (str_len > 0 && n > 0)
+	{
+		ptr[--str_len] = (n % 10) + '0';
+		n = n / 10;
 	}
 	return (ptr);
 }
@@ -69,20 +59,10 @@ char	*char_fill(int n)
 	char	*ptr;
 
 	if (n == -2147483648)
-	{
-		ptr = (char *)malloc(sizeof(char) * 12);
-		if (!ptr)
-			return (NULL);
-		ptr = "-2147483648";
-	}
-	if (n == 0)
-	{
-		ptr = (char *)malloc(sizeof(char) * 2);
-		if (!ptr)
-			return (NULL);
-		ptr = "0";
-	}
-	return (ptr);
+		return (ft_strdup("-2147483648"));
+	else if (n == 0)
+		return (ft_strdup("0"));
+	return (NULL);
 }
 
 char	*ft_itoa(int n)
