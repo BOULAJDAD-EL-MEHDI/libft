@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 08:49:36 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/26 11:37:13 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:43:22 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	*ft_calloc(size_t nmemb, size_t size)
 {

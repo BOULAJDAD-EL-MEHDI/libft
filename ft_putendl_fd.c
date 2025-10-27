@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:12:30 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 11:42:17 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:45:10 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 void	ft_putendl_fd(char *s, int fd)
 {

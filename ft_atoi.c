@@ -5,13 +5,12 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/10/18 10:04:13 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/26 11:01:57 by eboulajd         ###   ########.fr       */
+/*   Created: 2025/10/27 17:07:08 by eboulajd          #+#    #+#             */
+/*   Updated: 2025/10/27 17:07:12 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include <stdio.h>
+#include "libft.h"
 
 int	ft_atoi(const char *nptr)
 {
@@ -38,27 +37,4 @@ int	ft_atoi(const char *nptr)
 		nptr++;
 	}
 	return (num * signe);
-}
-
-
-int main(void)
-{
-    int i;
-
-    i = ft_atoi("0");
-    printf("the number is : %d\n", i);
-
-    i = ft_atoi("-0");
-    printf("the number is : %d\n", i);
-
-    i = ft_atoi("+958");
-    printf("the number is : %d\n", i);
-
-    i = ft_atoi("99999999999999999999");
-    printf("the number is : %d\n", i);
-
-    i = ft_atoi("-111111111111111111111");
-    printf("the number is : %d\n", i);
-
-    return 0;
 }

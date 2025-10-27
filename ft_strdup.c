@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:15:57 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/26 11:41:27 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:44:30 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strdup(const char *s)
 {

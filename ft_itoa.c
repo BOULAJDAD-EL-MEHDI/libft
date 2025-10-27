@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 08:32:22 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/26 14:25:38 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 14:39:01 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 int	ft_num_count(long n)
 {
@@ -56,8 +58,6 @@ char	*ft_fill(long n, int str_len, char *ptr)
 
 char	*char_fill(int n)
 {
-	char	*ptr;
-
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));
 	else if (n == 0)

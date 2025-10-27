@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 07:45:38 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/25 10:24:07 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:42:43 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strnstr(const char *big, const char *little, size_t len)
 {

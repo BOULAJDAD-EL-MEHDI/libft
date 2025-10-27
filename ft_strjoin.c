@@ -6,9 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:54:07 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/26 11:59:17 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/27 13:45:51 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include "libft.h"
 
 char	*ft_strjoin(char const *s1, char const *s2)
 {
