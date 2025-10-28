@@ -1,12 +1,12 @@
 # **************************************************************************** #
 #                                                                              #
 #                                                         :::      ::::::::    #
-#    makefile                                           :+:      :+:    :+:    #
+#    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
 #    By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 12:52:28 by eboulajd          #+#    #+#              #
-#    Updated: 2025/10/27 14:47:04 by eboulajd         ###   ########.fr        #
+#    Updated: 2025/10/28 12:54:59 by eboulajd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -33,12 +33,12 @@ ${LIB}: ${OBJS}
 
 all: ${LIB}
 
-clean:
+clean: 
 	rm -f ${OBJS}
 
-fclean: clean;
-	fm -f ${lib}
+fclean: clean
+	rm -f ${LIB}
 
 re: fclean all
 
-.PHONY: clean
+.PHONY: all clean fclean re
