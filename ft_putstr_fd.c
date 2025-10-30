@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:05:03 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/27 14:41:57 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:18:18 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putstr_fd(char *s, int fd)
 	size_t	i;
 
 	i = 0;
+	if (!s)
+		return ;
 	while (s[i])
 	{
 		write(fd, &s[i], 1);

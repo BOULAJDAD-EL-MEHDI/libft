@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 15:12:30 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/27 14:45:10 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:18:56 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,8 @@ void	ft_putendl_fd(char *s, int fd)
 	size_t	i;
 	char	c;
 
+	if (!s)
+		return ;
 	c = '\n';
 	i = 0;
 	while (s[i])

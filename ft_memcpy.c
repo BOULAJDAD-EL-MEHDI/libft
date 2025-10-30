@@ -6,13 +6,11 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:46:30 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/28 14:36:22 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:29:40 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
-#include <stdio.h>
-#include <string.h>
 
 void	*ft_memcpy(void *dest, const void *src, size_t n)
 {

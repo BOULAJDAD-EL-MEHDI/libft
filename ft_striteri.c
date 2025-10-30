@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 14:09:52 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/27 14:40:25 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/29 15:16:26 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,8 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char*))
 {
 	size_t	i;
 
+	if (!s)
+		return ;
 	i = 0;
 	while (s[i])
 	{

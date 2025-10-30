@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:54:07 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/27 13:45:51 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/29 12:14:22 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,5 +36,6 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		i++;
 		j++;
 	}
+	ret[i] = '\0';
 	return (ret);
 }
