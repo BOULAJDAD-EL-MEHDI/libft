@@ -6,13 +6,15 @@
 #    By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 12:52:28 by eboulajd          #+#    #+#              #
-#    Updated: 2025/10/28 12:54:59 by eboulajd         ###   ########.fr        #
+#    Updated: 2025/11/04 20:40:58 by eboulajd         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 LIB = libft.a
 
 CC = cc
+
+LIBH = libft.h
 
 CFLAGS = -Wall -Wextra -Werror -I ./
 
@@ -25,10 +27,10 @@ SRCS = ${LIBC} ${ADDITIONAL}
 
 OBJS = ${SRCS:.c=.o}
 
-.c.o:
-	${CC} ${CFLAGS} -c $< -o ${<:.c=.o}
+%.o: %.c ${LIBH}
+	${CC} ${CFLAGS} -c $< -o $@
 
-${LIB}: ${OBJS}
+${LIB}: ${OBJS} ${LIBH}
 	ar -rsc ${LIB} ${OBJS}
 
 all: ${LIB}

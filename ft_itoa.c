@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-int	ft_num_count(long n)
+static int	ft_num_count(long n)
 {
 	int	i;
 
@@ -27,7 +27,7 @@ int	ft_num_count(long n)
 	return (i);
 }
 
-char	*ft_allocate(int n, int str_len)
+static char	*ft_allocate(int n, int str_len)
 {
 	char	*ptr;
 
@@ -40,7 +40,7 @@ char	*ft_allocate(int n, int str_len)
 	return (ptr);
 }
 
-char	*ft_fill(long n, int str_len, char *ptr)
+static char	*ft_fill(long n, int str_len, char *ptr)
 {
 	ptr[str_len] = '\0';
 	if (n < 0)
@@ -56,7 +56,7 @@ char	*ft_fill(long n, int str_len, char *ptr)
 	return (ptr);
 }
 
-char	*char_fill(int n)
+static char	*char_fill(int n)
 {
 	if (n == -2147483648)
 		return (ft_strdup("-2147483648"));

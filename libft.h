@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/24 11:13:49 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/28 10:45:08 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/11/04 20:48:56 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,6 @@
 # define LIBFT_H
 
 # include <stdlib.h>
-# include <string.h>
 # include <unistd.h>
 
 int		ft_isalpha(int c);

@@ -6,7 +6,7 @@
 /*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/27 17:07:08 by eboulajd          #+#    #+#             */
-/*   Updated: 2025/10/29 11:06:32 by eboulajd         ###   ########.fr       */
+/*   Updated: 2025/10/31 13:53:24 by eboulajd         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,27 +14,29 @@
 
 int	ft_atoi(const char *nptr)
 {
-	long	num;
-	int		signe;
+	long long	res;
+	long long	tmp;
+	int			signe;
+	int			i;
 
-	num = 0;
+	res = 0;
 	signe = 1;
-	while (*nptr == ' ' || (*nptr >= 9 && *nptr <= 13))
-		nptr++;
-	if (*nptr == '-' || *nptr == '+')
+	i = 0;
+	while (nptr[i] == ' ' || (nptr[i] >= 9 && nptr[i] <= 13))
+		i++;
+	if (nptr[i] == '+' || nptr[i] == '-')
 	{
-		if (*nptr == '-')
-			signe = -1;
-		nptr++;
+		if (nptr[i] == '-')
+			signe *= -1;
+		i++;
 	}
-	while (*nptr >= '0' && *nptr <= '9')
+	while (nptr[i] >= '0' && nptr[i] <= '9')
 	{
-		num = num * 10 + (*nptr - '0');
-		if (num * signe > 2147483647)
-			return (2147483647);
-		if (num * signe < -2147483648)
-			return (-2147483648);
-		nptr++;
+		tmp = res;
+		res = res * 10 + (nptr[i] - '0');
+		if (tmp > res)
+			return ((signe == -1) * 0 + (signe == 1) * -1);
+		i++;
 	}
-	return (num * signe);
+	return ((int)(res * signe));
 }
