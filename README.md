@@ -1,8 +1,8 @@
+*This project has been created as part of the 42 curriculum by eboulajd.*
+
 # Libft
 
 A static C library implementing 34 character, memory, string, conversion, and file-descriptor utilities.
-
-*This project has been created as part of the 42 curriculum by eboulajd.*
 
 ## Overview
 
