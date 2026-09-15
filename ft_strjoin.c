@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strjoin.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:54:07 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/11/01 20:33:43 by eboulajd         ###   ########.fr       */
@@ -12,9 +12,9 @@
 
 #include "libft.h"
 
-static int	ft_fill_s1(char *s1, char *ret)
+static size_t	ft_fill_s1(char *s1, char *ret)
 {
-	int	i;
+	size_t	i;
 
 	i = 0;
 	while (s1[i])
@@ -35,6 +35,8 @@ char	*ft_strjoin(char const *s1, char const *s2)
 		return (NULL);
 	i = ft_strlen(s1);
 	j = ft_strlen(s2);
+	if (j > (size_t)-1 - i - 1)
+		return (NULL);
 	ret = malloc(i + j + 1);
 	if (!ret)
 		return (NULL);

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_itoa.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/22 08:32:22 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/27 14:39:01 by eboulajd         ###   ########.fr       */
@@ -79,6 +79,8 @@ char	*ft_itoa(int n)
 	{
 		str_len = ft_num_count(n);
 		ptr = ft_allocate(n, str_len);
+		if (!ptr)
+			return (NULL);
 		ptr = ft_fill(n, str_len, ptr);
 		return (ptr);
 	}

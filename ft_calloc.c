@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_calloc.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 08:49:36 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/29 11:19:12 by eboulajd         ###   ########.fr       */

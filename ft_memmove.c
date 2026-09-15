@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/15 10:12:29 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/31 11:49:37 by eboulajd         ###   ########.fr       */
@@ -11,6 +11,7 @@
 /* ************************************************************************** */
 
 #include "libft.h"
+#include <stdint.h>
 
 void	*ft_memmove(void *dest, const void *src, size_t n)
 {
@@ -18,7 +19,7 @@ void	*ft_memmove(void *dest, const void *src, size_t n)
 	size_t			i;
 
 	sr = (unsigned char *)src;
-	if (sr > (unsigned char *)dest)
+	if ((uintptr_t)sr > (uintptr_t)dest)
 	{
 		i = 0;
 		while (i < n)

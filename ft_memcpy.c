@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_memcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/14 13:46:30 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/31 11:49:16 by eboulajd         ###   ########.fr       */

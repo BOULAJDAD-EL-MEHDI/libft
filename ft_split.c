@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_split.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/21 13:33:34 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/29 14:43:23 by eboulajd         ###   ########.fr       */
@@ -12,7 +12,7 @@
 
 #include "libft.h"
 
-static char	**free_tab(char **tab, int filled)
+static char	**free_tab(char **tab, size_t filled)
 {
 	while (filled > 0)
 	{
@@ -23,10 +23,10 @@ static char	**free_tab(char **tab, int filled)
 	return (NULL);
 }
 
-static int	ft_num_words(char const *s, char sep)
+static size_t	ft_num_words(char const *s, char sep)
 {
-	int	i;
-	int	count;
+	size_t	i;
+	size_t	count;
 
 	i = 0;
 	count = 0;
@@ -44,9 +44,9 @@ static int	ft_num_words(char const *s, char sep)
 	return (count);
 }
 
-static char	*ft_fill_word(char *ptr, char const *s, int end, int len)
+static char	*ft_fill_word(char *ptr, char const *s, size_t end, size_t len)
 {
-	int	j;
+	size_t	j;
 
 	j = 0;
 	while (len > 0)
@@ -59,11 +59,11 @@ static char	*ft_fill_word(char *ptr, char const *s, int end, int len)
 	return (ptr);
 }
 
-static char	**fill_tab(char const *s, char sep, char **tab, int num_words)
+static char	**fill_tab(char const *s, char sep, char **tab, size_t num_words)
 {
-	int	i;
-	int	w;
-	int	len;
+	size_t	i;
+	size_t	w;
+	size_t	len;
 
 	i = 0;
 	w = 0;
@@ -91,11 +91,13 @@ static char	**fill_tab(char const *s, char sep, char **tab, int num_words)
 char	**ft_split(char const *s, char sep)
 {
 	char	**tab;
-	int		num_words;
+	size_t	num_words;
 
 	if (!s)
 		return (0);
 	num_words = ft_num_words(s, sep);
+	if (num_words >= (size_t)-1 / sizeof(char *))
+		return (NULL);
 	tab = (char **)malloc(sizeof(char *) * (num_words + 1));
 	if (!tab)
 		return (0);

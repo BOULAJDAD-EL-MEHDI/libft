@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strnstr.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/18 07:45:38 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/29 11:00:55 by eboulajd         ###   ########.fr       */
@@ -24,10 +24,10 @@ char	*ft_strnstr(const char *big, const char *little, size_t len)
 		return ((char *)big);
 	len_little = ft_strlen(little);
 	i = 0;
-	while (big[i] && i < len)
+	while (i < len && big[i])
 	{
 		j = 0;
-		while (big[i + j] && big[i + j] == little[j] && i + j < len)
+		while (j < len - i && big[i + j] && big[i + j] == little[j])
 			j++;
 		if (j == len_little)
 			return ((char *)big + i);

@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strtrim.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 11:07:48 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/29 14:31:06 by eboulajd         ###   ########.fr       */
@@ -43,7 +43,7 @@ static char	*find_finish(char const *str, char const *set, char const *start)
 	int		in_set;
 
 	i = ft_strlen(str) - 1;
-	while (str + i >= start)
+	while (str + i > start)
 	{
 		in_set = 0;
 		j = 0;
@@ -89,8 +89,10 @@ char	*ft_strtrim(char const *s, char const *set)
 	if (!s || !set)
 		return (NULL);
 	start = find_start(s, set);
-	finish = find_finish(s, set, s);
-	if (!s[0] || finish < start)
+	finish = start;
+	if (*start)
+		finish = find_finish(s, set, start);
+	if (!*start)
 	{
 		ptr = malloc(1);
 		if (!ptr)

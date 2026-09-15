@@ -3,7 +3,7 @@
 #                                                         :::      ::::::::    #
 #    Makefile                                           :+:      :+:    :+:    #
 #                                                     +:+ +:+         +:+      #
-#    By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+         #
+#    By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2025/10/27 12:52:28 by eboulajd          #+#    #+#              #
 #    Updated: 2025/11/04 20:40:58 by eboulajd         ###   ########.fr        #
@@ -41,6 +41,10 @@ clean:
 fclean: clean
 	rm -f ${LIB}
 
-re: fclean all
+re: fclean
+	${MAKE} all
 
-.PHONY: all clean fclean re
+test: ${LIB}
+	CC="${CC}" sh tests/run.sh
+
+.PHONY: all clean fclean re test

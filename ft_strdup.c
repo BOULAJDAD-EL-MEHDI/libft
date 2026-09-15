@@ -3,7 +3,7 @@
 /*                                                        :::      ::::::::   */
 /*   ft_strdup.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: eboulajd <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: eboulajd <eboulajd@42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/10/19 10:15:57 by eboulajd          #+#    #+#             */
 /*   Updated: 2025/10/29 11:31:15 by eboulajd         ###   ########.fr       */
@@ -15,7 +15,7 @@
 char	*ft_strdup(const char *s)
 {
 	char	*ptr;
-	int		i;
+	size_t	i;
 
 	i = 0;
 	while (s[i])
