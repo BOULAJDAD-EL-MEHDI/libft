@@ -24,11 +24,7 @@ The project uses C, Make, and `ar`, with one source file per public function and
 
 ## Architecture
 
-```text
-ft_*.c  ──compile──>  ft_*.o  ──ar──>  libft.a
-                                         │
-caller.c + libft.h  ──────────link─────────┘  ──> executable
-```
+Each function has its own C file. Running `make` builds `libft.a`. To use the library, include `libft.h` in your program and link it with `libft.a`.
 
 | Function family | Public functions (`ft_` prefix) |
 | --- | --- |
